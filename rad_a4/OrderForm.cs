@@ -10,9 +10,10 @@ using System.Windows.Forms;
 
 namespace rad_a4
 {
-    public partial class SplashScreen : Form
+    public partial class OrderForm : Form
     {
-        public SplashScreen()
+        public ProductInfoForm previousForm;
+        public OrderForm()
         {
             InitializeComponent();
         }

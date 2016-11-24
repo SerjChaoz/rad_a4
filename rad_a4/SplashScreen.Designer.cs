@@ -28,21 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.LoadingTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
+            // 
+            // LoadingTimer
+            // 
+            this.LoadingTimer.Enabled = true;
+            this.LoadingTimer.Interval = 3000;
+            this.LoadingTimer.Tick += new System.EventHandler(this.LoadingTimer_Tick);
             // 
             // SplashScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.BackgroundImage = global::rad_a4.Properties.Resources.splash;
+            this.ClientSize = new System.Drawing.Size(500, 500);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SplashScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SplashScreen";
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Timer LoadingTimer;
     }
 }
 
