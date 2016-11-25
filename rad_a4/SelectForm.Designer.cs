@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectForm));
             this.ProductsDataGridView = new System.Windows.Forms.DataGridView();
             this.NextButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
@@ -43,12 +44,14 @@
             this.ProductsDataGridView.Location = new System.Drawing.Point(12, 38);
             this.ProductsDataGridView.Name = "ProductsDataGridView";
             this.ProductsDataGridView.ReadOnly = true;
-            this.ProductsDataGridView.Size = new System.Drawing.Size(857, 455);
+            this.ProductsDataGridView.Size = new System.Drawing.Size(766, 353);
             this.ProductsDataGridView.TabIndex = 0;
+            this.ProductsDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductsDataGridView_CellContentClick);
             // 
             // NextButton
             // 
-            this.NextButton.Location = new System.Drawing.Point(794, 513);
+            this.NextButton.Enabled = false;
+            this.NextButton.Location = new System.Drawing.Point(703, 413);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(75, 23);
             this.NextButton.TabIndex = 1;
@@ -58,7 +61,7 @@
             // 
             // CancelButton
             // 
-            this.CancelButton.Location = new System.Drawing.Point(713, 513);
+            this.CancelButton.Location = new System.Drawing.Point(590, 413);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(75, 23);
             this.CancelButton.TabIndex = 2;
@@ -69,7 +72,7 @@
             // SelectionLabel
             // 
             this.SelectionLabel.AutoSize = true;
-            this.SelectionLabel.Location = new System.Drawing.Point(12, 518);
+            this.SelectionLabel.Location = new System.Drawing.Point(12, 418);
             this.SelectionLabel.Name = "SelectionLabel";
             this.SelectionLabel.Size = new System.Drawing.Size(77, 13);
             this.SelectionLabel.TabIndex = 3;
@@ -78,10 +81,10 @@
             // SummaryTextBox
             // 
             this.SummaryTextBox.BackColor = System.Drawing.Color.White;
-            this.SummaryTextBox.Location = new System.Drawing.Point(107, 513);
+            this.SummaryTextBox.Location = new System.Drawing.Point(107, 413);
             this.SummaryTextBox.Name = "SummaryTextBox";
             this.SummaryTextBox.ReadOnly = true;
-            this.SummaryTextBox.Size = new System.Drawing.Size(600, 20);
+            this.SummaryTextBox.Size = new System.Drawing.Size(459, 20);
             this.SummaryTextBox.TabIndex = 4;
             // 
             // label1
@@ -97,13 +100,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(881, 548);
+            this.ClientSize = new System.Drawing.Size(792, 448);
+            this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SummaryTextBox);
             this.Controls.Add(this.SelectionLabel);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.ProductsDataGridView);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SelectForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select Form";

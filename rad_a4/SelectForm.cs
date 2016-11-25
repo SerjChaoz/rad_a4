@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using rad_a4.Modules;
+using System.Diagnostics;
 
 namespace rad_a4
 {
@@ -56,6 +57,18 @@ namespace rad_a4
 
             // fill data grid view from product list
             ProductsDataGridView.DataSource = productList;
+        }
+        /// <summary>
+        /// highlight the row and unlock next button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ProductsDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // row selected
+            var row = Convert.ToString(ProductsDataGridView.Rows[e.RowIndex]);
+            //int selectedProductID = Convert.ToInt32(row);
+            Debug.WriteLine(row);
         }
     }
 }
