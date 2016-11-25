@@ -20,7 +20,47 @@ namespace rad_a4
             InitializeComponent();
         }
 
+        private void ProductInfoForm_Load(object sender, EventArgs e)
+        {
+            // add if statement here 
+            OpenFile();
+        }
+
+        // events section
+
         private void SaveToFileButton_Click(object sender, EventArgs e)
+        {
+            saveToFile();
+
+        }
+        /// <summary>
+        /// go to next form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            OrderForm orderForm = new OrderForm();
+            orderForm.previousForm = this;
+            orderForm.Show();
+            this.Hide();
+        }
+        /// <summary>
+        /// go to previous form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            previousForm.Show();
+            this.Hide();
+        }
+
+        // method section
+        /// <summary>
+        /// this method save form information to file
+        /// </summary>
+        private static void saveToFile()
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
 
@@ -31,7 +71,7 @@ namespace rad_a4
 
             DialogResult result = saveFileDialog.ShowDialog();
 
-            if(result != DialogResult.Cancel)
+            if (result != DialogResult.Cancel)
             {
                 // create an instance of writer object
                 StreamWriter writer = new StreamWriter(saveFileDialog.FileName, true);
@@ -41,21 +81,41 @@ namespace rad_a4
                 // close
                 writer.Close();
             }
-
         }
-
-        private void NextButton_Click(object sender, EventArgs e)
+        /// <summary>
+        /// this method open file and use reader to get information
+        /// </summary>
+        private void OpenFile()
         {
-            OrderForm orderForm = new OrderForm();
-            orderForm.previousForm = this;
-            orderForm.Show();
-            this.Hide();
-        }
+            // create object open file dialog
+            OpenFileDialog openFileDialog = new OpenFileDialog();
 
-        private void CancelButton_Click(object sender, EventArgs e)
-        {
-            previousForm.Show();
-            this.Hide();
+            // set properties
+            openFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
+            openFileDialog.Title = "Open File";
+            openFileDialog.Filter = "Text Files(*.txt) | *.txt | All Files(*.*) | *.*";
+
+            // open dialog box
+            DialogResult result = openFileDialog.ShowDialog();
+
+            if (result != DialogResult.Cancel)
+            {
+                try
+                {
+                    // create reader
+                    StreamReader reader = new StreamReader(openFileDialog.FileName);
+
+                    // read in the data with readline to the object
+
+                    // close the streams
+                    reader.Close();
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Error occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

@@ -28,22 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ProductsDataGridView = new System.Windows.Forms.DataGridView();
             this.NextButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
             this.SelectionLabel = new System.Windows.Forms.Label();
             this.SummaryTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // ProductsDataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 38);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(857, 455);
-            this.dataGridView1.TabIndex = 0;
+            this.ProductsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProductsDataGridView.Location = new System.Drawing.Point(12, 38);
+            this.ProductsDataGridView.Name = "ProductsDataGridView";
+            this.ProductsDataGridView.ReadOnly = true;
+            this.ProductsDataGridView.Size = new System.Drawing.Size(857, 455);
+            this.ProductsDataGridView.TabIndex = 0;
             // 
             // NextButton
             // 
@@ -76,8 +77,10 @@
             // 
             // SummaryTextBox
             // 
+            this.SummaryTextBox.BackColor = System.Drawing.Color.White;
             this.SummaryTextBox.Location = new System.Drawing.Point(107, 513);
             this.SummaryTextBox.Name = "SummaryTextBox";
+            this.SummaryTextBox.ReadOnly = true;
             this.SummaryTextBox.Size = new System.Drawing.Size(600, 20);
             this.SummaryTextBox.TabIndex = 4;
             // 
@@ -100,11 +103,12 @@
             this.Controls.Add(this.SelectionLabel);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.NextButton);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.ProductsDataGridView);
             this.Name = "SelectForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select Form";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.SelectForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ProductsDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,7 +116,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView ProductsDataGridView;
         private System.Windows.Forms.Button NextButton;
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Label SelectionLabel;
