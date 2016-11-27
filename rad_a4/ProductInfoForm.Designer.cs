@@ -84,12 +84,13 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MenuItemFile,
             this.EditMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(844, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(963, 26);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -100,26 +101,26 @@
             this.SaveMenuItem,
             this.ExitMenuItem});
             this.MenuItemFile.Name = "MenuItemFile";
-            this.MenuItemFile.Size = new System.Drawing.Size(37, 20);
+            this.MenuItemFile.Size = new System.Drawing.Size(49, 22);
             this.MenuItemFile.Text = "File";
             // 
             // OpenMenuItem
             // 
             this.OpenMenuItem.Name = "OpenMenuItem";
-            this.OpenMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.OpenMenuItem.Size = new System.Drawing.Size(119, 22);
             this.OpenMenuItem.Text = "Open";
             this.OpenMenuItem.Click += new System.EventHandler(this.SaveToFileButton_Click);
             // 
             // SaveMenuItem
             // 
             this.SaveMenuItem.Name = "SaveMenuItem";
-            this.SaveMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.SaveMenuItem.Size = new System.Drawing.Size(119, 22);
             this.SaveMenuItem.Text = "Save";
             // 
             // ExitMenuItem
             // 
             this.ExitMenuItem.Name = "ExitMenuItem";
-            this.ExitMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.ExitMenuItem.Size = new System.Drawing.Size(119, 22);
             this.ExitMenuItem.Text = "Exit";
             // 
             // EditMenuItem
@@ -127,178 +128,199 @@
             this.EditMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SelectMenuItem});
             this.EditMenuItem.Name = "EditMenuItem";
-            this.EditMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.EditMenuItem.Size = new System.Drawing.Size(52, 22);
             this.EditMenuItem.Text = "Edit";
             // 
             // SelectMenuItem
             // 
             this.SelectMenuItem.Name = "SelectMenuItem";
-            this.SelectMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.SelectMenuItem.Size = new System.Drawing.Size(263, 22);
             this.SelectMenuItem.Text = "Select Another Product";
             // 
             // ProductIDLabel
             // 
             this.ProductIDLabel.AutoSize = true;
-            this.ProductIDLabel.Location = new System.Drawing.Point(41, 42);
+            this.ProductIDLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ProductIDLabel.Location = new System.Drawing.Point(41, 51);
             this.ProductIDLabel.Name = "ProductIDLabel";
-            this.ProductIDLabel.Size = new System.Drawing.Size(58, 13);
+            this.ProductIDLabel.Size = new System.Drawing.Size(94, 18);
             this.ProductIDLabel.TabIndex = 1;
             this.ProductIDLabel.Text = "Product ID";
             // 
             // ConditionLabel
             // 
             this.ConditionLabel.AutoSize = true;
-            this.ConditionLabel.Location = new System.Drawing.Point(327, 42);
+            this.ConditionLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ConditionLabel.Location = new System.Drawing.Point(339, 51);
             this.ConditionLabel.Name = "ConditionLabel";
-            this.ConditionLabel.Size = new System.Drawing.Size(51, 13);
+            this.ConditionLabel.Size = new System.Drawing.Size(86, 18);
             this.ConditionLabel.TabIndex = 2;
             this.ConditionLabel.Text = "Condition";
             // 
             // CostLabel
             // 
             this.CostLabel.AutoSize = true;
-            this.CostLabel.Location = new System.Drawing.Point(602, 42);
+            this.CostLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CostLabel.Location = new System.Drawing.Point(670, 51);
             this.CostLabel.Name = "CostLabel";
-            this.CostLabel.Size = new System.Drawing.Size(28, 13);
+            this.CostLabel.Size = new System.Drawing.Size(45, 18);
             this.CostLabel.TabIndex = 3;
             this.CostLabel.Text = "Cost";
             // 
             // PlatformLabel
             // 
             this.PlatformLabel.AutoSize = true;
-            this.PlatformLabel.Location = new System.Drawing.Point(24, 28);
+            this.PlatformLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PlatformLabel.Location = new System.Drawing.Point(64, 34);
             this.PlatformLabel.Name = "PlatformLabel";
-            this.PlatformLabel.Size = new System.Drawing.Size(45, 13);
+            this.PlatformLabel.Size = new System.Drawing.Size(77, 18);
             this.PlatformLabel.TabIndex = 4;
             this.PlatformLabel.Text = "Platform";
             // 
             // ManufacturerLabel
             // 
             this.ManufacturerLabel.AutoSize = true;
-            this.ManufacturerLabel.Location = new System.Drawing.Point(27, 66);
+            this.ManufacturerLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ManufacturerLabel.Location = new System.Drawing.Point(64, 81);
             this.ManufacturerLabel.Name = "ManufacturerLabel";
-            this.ManufacturerLabel.Size = new System.Drawing.Size(70, 13);
+            this.ManufacturerLabel.Size = new System.Drawing.Size(114, 18);
             this.ManufacturerLabel.TabIndex = 5;
             this.ManufacturerLabel.Text = "Manufacturer";
             // 
             // OsLabel
             // 
             this.OsLabel.AutoSize = true;
-            this.OsLabel.Location = new System.Drawing.Point(454, 28);
+            this.OsLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.OsLabel.Location = new System.Drawing.Point(556, 34);
             this.OsLabel.Name = "OsLabel";
-            this.OsLabel.Size = new System.Drawing.Size(22, 13);
+            this.OsLabel.Size = new System.Drawing.Size(31, 18);
             this.OsLabel.TabIndex = 6;
             this.OsLabel.Text = "OS";
             // 
             // ModelLabel
             // 
             this.ModelLabel.AutoSize = true;
-            this.ModelLabel.Location = new System.Drawing.Point(454, 66);
+            this.ModelLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ModelLabel.Location = new System.Drawing.Point(556, 81);
             this.ModelLabel.Name = "ModelLabel";
-            this.ModelLabel.Size = new System.Drawing.Size(36, 13);
+            this.ModelLabel.Size = new System.Drawing.Size(56, 18);
             this.ModelLabel.TabIndex = 7;
             this.ModelLabel.Text = "Model";
             // 
             // CPUTypeLabel
             // 
             this.CPUTypeLabel.AutoSize = true;
-            this.CPUTypeLabel.Location = new System.Drawing.Point(24, 112);
+            this.CPUTypeLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CPUTypeLabel.Location = new System.Drawing.Point(6, 130);
             this.CPUTypeLabel.Name = "CPUTypeLabel";
-            this.CPUTypeLabel.Size = new System.Drawing.Size(56, 13);
+            this.CPUTypeLabel.Size = new System.Drawing.Size(84, 18);
             this.CPUTypeLabel.TabIndex = 8;
             this.CPUTypeLabel.Text = "CPU Type";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label9.Location = new System.Drawing.Point(56, 308);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 13);
+            this.label9.Size = new System.Drawing.Size(0, 18);
             this.label9.TabIndex = 9;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label10.Location = new System.Drawing.Point(56, 357);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(0, 13);
+            this.label10.Size = new System.Drawing.Size(0, 18);
             this.label10.TabIndex = 10;
             // 
             // ConfirmLabel
             // 
             this.ConfirmLabel.AutoSize = true;
-            this.ConfirmLabel.Location = new System.Drawing.Point(41, 396);
+            this.ConfirmLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ConfirmLabel.Location = new System.Drawing.Point(41, 462);
             this.ConfirmLabel.Name = "ConfirmLabel";
-            this.ConfirmLabel.Size = new System.Drawing.Size(134, 13);
+            this.ConfirmLabel.Size = new System.Drawing.Size(233, 18);
             this.ConfirmLabel.TabIndex = 11;
             this.ConfirmLabel.Text = "Click Next to Confirm Order";
             // 
             // CPUSpeedLabel
             // 
             this.CPUSpeedLabel.AutoSize = true;
-            this.CPUSpeedLabel.Location = new System.Drawing.Point(279, 112);
+            this.CPUSpeedLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CPUSpeedLabel.Location = new System.Drawing.Point(293, 130);
             this.CPUSpeedLabel.Name = "CPUSpeedLabel";
-            this.CPUSpeedLabel.Size = new System.Drawing.Size(63, 13);
+            this.CPUSpeedLabel.Size = new System.Drawing.Size(97, 18);
             this.CPUSpeedLabel.TabIndex = 12;
             this.CPUSpeedLabel.Text = "CPU Speed";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label13.Location = new System.Drawing.Point(308, 308);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(0, 13);
+            this.label13.Size = new System.Drawing.Size(0, 18);
             this.label13.TabIndex = 13;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label14.Location = new System.Drawing.Point(308, 357);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(0, 13);
+            this.label14.Size = new System.Drawing.Size(0, 18);
             this.label14.TabIndex = 14;
             // 
             // HDDLabel
             // 
             this.HDDLabel.AutoSize = true;
-            this.HDDLabel.Location = new System.Drawing.Point(543, 28);
+            this.HDDLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.HDDLabel.Location = new System.Drawing.Point(582, 46);
             this.HDDLabel.Name = "HDDLabel";
-            this.HDDLabel.Size = new System.Drawing.Size(31, 13);
+            this.HDDLabel.Size = new System.Drawing.Size(44, 18);
             this.HDDLabel.TabIndex = 15;
             this.HDDLabel.Text = "HDD";
             // 
             // GPULabel
             // 
             this.GPULabel.AutoSize = true;
-            this.GPULabel.Location = new System.Drawing.Point(543, 70);
+            this.GPULabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.GPULabel.Location = new System.Drawing.Point(582, 88);
             this.GPULabel.Name = "GPULabel";
-            this.GPULabel.Size = new System.Drawing.Size(57, 13);
+            this.GPULabel.Size = new System.Drawing.Size(85, 18);
             this.GPULabel.TabIndex = 16;
             this.GPULabel.Text = "GPU Type";
             // 
             // WebCamLabel
             // 
             this.WebCamLabel.AutoSize = true;
-            this.WebCamLabel.Location = new System.Drawing.Point(543, 112);
+            this.WebCamLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.WebCamLabel.Location = new System.Drawing.Point(582, 130);
             this.WebCamLabel.Name = "WebCamLabel";
-            this.WebCamLabel.Size = new System.Drawing.Size(51, 13);
+            this.WebCamLabel.Size = new System.Drawing.Size(80, 18);
             this.WebCamLabel.TabIndex = 17;
             this.WebCamLabel.Text = "WebCam";
             // 
             // SelectAnotherProductButton
             // 
-            this.SelectAnotherProductButton.Location = new System.Drawing.Point(399, 396);
+            this.SelectAnotherProductButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SelectAnotherProductButton.Location = new System.Drawing.Point(363, 448);
             this.SelectAnotherProductButton.Name = "SelectAnotherProductButton";
-            this.SelectAnotherProductButton.Size = new System.Drawing.Size(197, 23);
+            this.SelectAnotherProductButton.Padding = new System.Windows.Forms.Padding(5);
+            this.SelectAnotherProductButton.Size = new System.Drawing.Size(223, 46);
             this.SelectAnotherProductButton.TabIndex = 18;
             this.SelectAnotherProductButton.Text = "Select Another Product";
             this.SelectAnotherProductButton.UseVisualStyleBackColor = true;
             // 
             // CancelButton
             // 
-            this.CancelButton.Location = new System.Drawing.Point(659, 396);
+            this.CancelButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CancelButton.Location = new System.Drawing.Point(691, 448);
             this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(75, 23);
+            this.CancelButton.Padding = new System.Windows.Forms.Padding(5);
+            this.CancelButton.Size = new System.Drawing.Size(101, 46);
             this.CancelButton.TabIndex = 19;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
@@ -306,9 +328,11 @@
             // 
             // NextButton
             // 
-            this.NextButton.Location = new System.Drawing.Point(755, 396);
+            this.NextButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NextButton.Location = new System.Drawing.Point(816, 448);
             this.NextButton.Name = "NextButton";
-            this.NextButton.Size = new System.Drawing.Size(75, 23);
+            this.NextButton.Padding = new System.Windows.Forms.Padding(5);
+            this.NextButton.Size = new System.Drawing.Size(101, 46);
             this.NextButton.TabIndex = 20;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
@@ -324,39 +348,44 @@
             this.ProductInfoBox.Controls.Add(this.ManufacturerLabel);
             this.ProductInfoBox.Controls.Add(this.OsLabel);
             this.ProductInfoBox.Controls.Add(this.ModelLabel);
+            this.ProductInfoBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ProductInfoBox.Location = new System.Drawing.Point(35, 90);
             this.ProductInfoBox.Name = "ProductInfoBox";
-            this.ProductInfoBox.Size = new System.Drawing.Size(797, 112);
+            this.ProductInfoBox.Size = new System.Drawing.Size(882, 131);
             this.ProductInfoBox.TabIndex = 21;
             this.ProductInfoBox.TabStop = false;
             this.ProductInfoBox.Text = "Product Info";
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(570, 63);
+            this.textBox7.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox7.Location = new System.Drawing.Point(621, 78);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(187, 20);
+            this.textBox7.Size = new System.Drawing.Size(239, 27);
             this.textBox7.TabIndex = 27;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(570, 25);
+            this.textBox6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox6.Location = new System.Drawing.Point(621, 28);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(187, 20);
+            this.textBox6.Size = new System.Drawing.Size(239, 27);
             this.textBox6.TabIndex = 26;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(156, 63);
+            this.textBox5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox5.Location = new System.Drawing.Point(242, 78);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(187, 20);
+            this.textBox5.Size = new System.Drawing.Size(187, 27);
             this.textBox5.TabIndex = 25;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(156, 25);
+            this.textBox4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox4.Location = new System.Drawing.Point(242, 31);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(187, 20);
+            this.textBox4.Size = new System.Drawing.Size(187, 27);
             this.textBox4.TabIndex = 24;
             // 
             // TechSpecsBox
@@ -379,138 +408,154 @@
             this.TechSpecsBox.Controls.Add(this.CPUSpeedLabel);
             this.TechSpecsBox.Controls.Add(this.GPULabel);
             this.TechSpecsBox.Controls.Add(this.HDDLabel);
-            this.TechSpecsBox.Location = new System.Drawing.Point(35, 213);
+            this.TechSpecsBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TechSpecsBox.Location = new System.Drawing.Point(35, 240);
             this.TechSpecsBox.Name = "TechSpecsBox";
-            this.TechSpecsBox.Size = new System.Drawing.Size(797, 157);
+            this.TechSpecsBox.Size = new System.Drawing.Size(882, 184);
             this.TechSpecsBox.TabIndex = 22;
             this.TechSpecsBox.TabStop = false;
             this.TechSpecsBox.Text = "Tech Specs";
             // 
             // textBox16
             // 
-            this.textBox16.Location = new System.Drawing.Point(604, 109);
+            this.textBox16.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox16.Location = new System.Drawing.Point(690, 124);
             this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(187, 20);
+            this.textBox16.Size = new System.Drawing.Size(170, 27);
             this.textBox16.TabIndex = 32;
             // 
             // textBox15
             // 
-            this.textBox15.Location = new System.Drawing.Point(604, 67);
+            this.textBox15.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox15.Location = new System.Drawing.Point(690, 82);
             this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(187, 20);
+            this.textBox15.Size = new System.Drawing.Size(170, 27);
             this.textBox15.TabIndex = 31;
             // 
             // textBox14
             // 
-            this.textBox14.Location = new System.Drawing.Point(350, 109);
+            this.textBox14.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox14.Location = new System.Drawing.Point(406, 124);
             this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(187, 20);
+            this.textBox14.Size = new System.Drawing.Size(170, 27);
             this.textBox14.TabIndex = 30;
             // 
             // textBox13
             // 
-            this.textBox13.Location = new System.Drawing.Point(350, 67);
+            this.textBox13.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox13.Location = new System.Drawing.Point(406, 82);
             this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(187, 20);
+            this.textBox13.Size = new System.Drawing.Size(170, 27);
             this.textBox13.TabIndex = 29;
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(350, 25);
+            this.textBox12.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox12.Location = new System.Drawing.Point(406, 43);
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(187, 20);
+            this.textBox12.Size = new System.Drawing.Size(170, 27);
             this.textBox12.TabIndex = 28;
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(604, 25);
+            this.textBox11.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox11.Location = new System.Drawing.Point(690, 40);
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(187, 20);
+            this.textBox11.Size = new System.Drawing.Size(170, 27);
             this.textBox11.TabIndex = 27;
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(86, 113);
+            this.textBox10.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox10.Location = new System.Drawing.Point(117, 124);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(187, 20);
+            this.textBox10.Size = new System.Drawing.Size(170, 27);
             this.textBox10.TabIndex = 26;
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(86, 69);
+            this.textBox9.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox9.Location = new System.Drawing.Point(117, 84);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(187, 20);
+            this.textBox9.Size = new System.Drawing.Size(170, 27);
             this.textBox9.TabIndex = 25;
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(86, 25);
+            this.textBox8.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox8.Location = new System.Drawing.Point(117, 40);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(187, 20);
+            this.textBox8.Size = new System.Drawing.Size(170, 27);
             this.textBox8.TabIndex = 24;
             // 
             // MemoryLabel
             // 
             this.MemoryLabel.AutoSize = true;
-            this.MemoryLabel.Location = new System.Drawing.Point(24, 28);
+            this.MemoryLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MemoryLabel.Location = new System.Drawing.Point(6, 46);
             this.MemoryLabel.Name = "MemoryLabel";
-            this.MemoryLabel.Size = new System.Drawing.Size(44, 13);
+            this.MemoryLabel.Size = new System.Drawing.Size(71, 18);
             this.MemoryLabel.TabIndex = 4;
             this.MemoryLabel.Text = "Memory";
             // 
             // CPUBrandLabel
             // 
             this.CPUBrandLabel.AutoSize = true;
-            this.CPUBrandLabel.Location = new System.Drawing.Point(24, 70);
+            this.CPUBrandLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CPUBrandLabel.Location = new System.Drawing.Point(6, 90);
             this.CPUBrandLabel.Name = "CPUBrandLabel";
-            this.CPUBrandLabel.Size = new System.Drawing.Size(60, 13);
+            this.CPUBrandLabel.Size = new System.Drawing.Size(94, 18);
             this.CPUBrandLabel.TabIndex = 5;
             this.CPUBrandLabel.Text = "CPU Brand";
             // 
             // LCDSizeLabel
             // 
             this.LCDSizeLabel.AutoSize = true;
-            this.LCDSizeLabel.Location = new System.Drawing.Point(279, 28);
+            this.LCDSizeLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LCDSizeLabel.Location = new System.Drawing.Point(293, 46);
             this.LCDSizeLabel.Name = "LCDSizeLabel";
-            this.LCDSizeLabel.Size = new System.Drawing.Size(51, 13);
+            this.LCDSizeLabel.Size = new System.Drawing.Size(80, 18);
             this.LCDSizeLabel.TabIndex = 6;
             this.LCDSizeLabel.Text = "LCD Size";
             // 
             // CPUNumberLabel
             // 
             this.CPUNumberLabel.AutoSize = true;
-            this.CPUNumberLabel.Location = new System.Drawing.Point(279, 70);
+            this.CPUNumberLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CPUNumberLabel.Location = new System.Drawing.Point(293, 88);
             this.CPUNumberLabel.Name = "CPUNumberLabel";
-            this.CPUNumberLabel.Size = new System.Drawing.Size(69, 13);
+            this.CPUNumberLabel.Size = new System.Drawing.Size(110, 18);
             this.CPUNumberLabel.TabIndex = 7;
             this.CPUNumberLabel.Text = "CPU Number";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(121, 39);
+            this.textBox1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.Location = new System.Drawing.Point(141, 48);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 20);
+            this.textBox1.Size = new System.Drawing.Size(167, 27);
             this.textBox1.TabIndex = 23;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(399, 39);
+            this.textBox2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox2.Location = new System.Drawing.Point(431, 48);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(187, 20);
+            this.textBox2.Size = new System.Drawing.Size(187, 27);
             this.textBox2.TabIndex = 24;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(645, 39);
+            this.textBox3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox3.Location = new System.Drawing.Point(730, 48);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(187, 20);
+            this.textBox3.Size = new System.Drawing.Size(187, 27);
             this.textBox3.TabIndex = 25;
             // 
             // ProductInfoForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(844, 426);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(963, 513);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
