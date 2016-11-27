@@ -16,6 +16,10 @@ namespace rad_a4
     {
         public StartForm previousForm;
 
+        product orderedProduct = Program.orderedProduct;
+        // add db connection variable
+        public ProductsContext db = new ProductsContext();
+
         public SelectForm()
         {
             InitializeComponent();
@@ -36,6 +40,15 @@ namespace rad_a4
 
         }
         /// <summary>
+        /// data grid click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ProductsDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            rowSelected(e);
+        }
+        /// <summary>
         /// load event that runs get products method
         /// </summary>
         /// <param name="sender"></param>
@@ -44,14 +57,13 @@ namespace rad_a4
         {
             getProducts();
         }
+        // form methods
         /// <summary>
         /// this method select data from products table and add it to data grid biew
         /// </summary>
         private void getProducts()
         {
-            // add db connection variable
-            ProductsContext db = new ProductsContext();
-
+            
             // select from db
             List<product> productList = (from product in db.products select product).ToList();
 
@@ -61,14 +73,28 @@ namespace rad_a4
         /// <summary>
         /// highlight the row and unlock next button
         /// </summary>
-        /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ProductsDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void rowSelected(DataGridViewCellEventArgs e)
         {
             // row selected
-            var row = Convert.ToString(ProductsDataGridView.Rows[e.RowIndex]);
-            //int selectedProductID = Convert.ToInt32(row);
-            Debug.WriteLine(row);
+            var row = ProductsDataGridView.Rows[e.RowIndex];
+            row.Selected = true;
+            // get product ID
+            int selectedProductID = Convert.ToInt32(row.Cells[0].Value);
+            // get product from DB
+            var selectedProduct = (from product
+                                   in db.products
+                                   where product.productID == selectedProductID
+                                   select product).FirstOrDefault();
+
+            // store data in product object
+            orderedProduct = selectedProduct;
+
+            // put data from object to text field
+            SummaryTextBox.Text = orderedProduct.manufacturer + " " + orderedProduct.model +
+                ". Priced at: $" + Math.Round(Convert.ToDouble(orderedProduct.cost), 2);
+            // unlock next button
+            NextButton.Enabled = true;
         }
     }
 }
