@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductInfoForm));
+            this.StripMenu = new System.Windows.Forms.MenuStrip();
             this.MenuItemFile = new System.Windows.Forms.ToolStripMenuItem();
             this.OpenMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SaveMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -77,22 +78,22 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.menuStrip1.SuspendLayout();
+            this.StripMenu.SuspendLayout();
             this.ProductInfoBox.SuspendLayout();
             this.TechSpecsBox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // StripMenu
             // 
-            this.menuStrip1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.StripMenu.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.StripMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MenuItemFile,
             this.EditMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(963, 26);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.StripMenu.Location = new System.Drawing.Point(0, 0);
+            this.StripMenu.Name = "StripMenu";
+            this.StripMenu.Size = new System.Drawing.Size(963, 26);
+            this.StripMenu.TabIndex = 0;
+            this.StripMenu.Text = "menuStrip1";
             // 
             // MenuItemFile
             // 
@@ -572,14 +573,15 @@
             this.Controls.Add(this.CostLabel);
             this.Controls.Add(this.ConditionLabel);
             this.Controls.Add(this.ProductIDLabel);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.StripMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.StripMenu;
             this.Name = "ProductInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProductInfoForm";
             this.Load += new System.EventHandler(this.ProductInfoForm_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.StripMenu.ResumeLayout(false);
+            this.StripMenu.PerformLayout();
             this.ProductInfoBox.ResumeLayout(false);
             this.ProductInfoBox.PerformLayout();
             this.TechSpecsBox.ResumeLayout(false);
@@ -591,7 +593,7 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip StripMenu;
         private System.Windows.Forms.ToolStripMenuItem MenuItemFile;
         private System.Windows.Forms.ToolStripMenuItem OpenMenuItem;
         private System.Windows.Forms.ToolStripMenuItem EditMenuItem;
