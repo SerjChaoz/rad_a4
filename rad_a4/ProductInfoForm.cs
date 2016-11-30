@@ -12,13 +12,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using rad_a4.Modules;
+using System.Diagnostics;
 
 namespace rad_a4
 {
     public partial class ProductInfoForm : Form
     {
+        // form variables
         public SelectForm previousForm;
-        public bool openFromFile = Program.openFromFile;
+        public static product orderedProduct = Program.orderedProduct;
 
         public ProductInfoForm()
         {
@@ -32,7 +35,7 @@ namespace rad_a4
         private static void saveToFile()
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
-
+            saveFileDialog.FileName = "Product";
             // properties for save file
             saveFileDialog.Filter = "Text Files(*.txt) | *.txt ";
             saveFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
@@ -46,9 +49,41 @@ namespace rad_a4
                 StreamWriter writer = new StreamWriter(saveFileDialog.FileName, true);
 
                 // write to file
-
+                writer.WriteLine(orderedProduct.productID + ";" +
+                orderedProduct.cost + ";" +
+                orderedProduct.manufacturer + ";" +
+                orderedProduct.model + ";" +
+                orderedProduct.RAM_type + ";" +
+                orderedProduct.RAM_size + ";" +
+                orderedProduct.displaytype + ";" +
+                orderedProduct.screensize + ";" +
+                orderedProduct.resolution + ";" +
+                orderedProduct.CPU_brand + ";" +
+                orderedProduct.CPU_Class + ";" +
+                orderedProduct.CPU_number + ";" +
+                orderedProduct.CPU_speed + ";" +
+                orderedProduct.CPU_type + ";" +
+                orderedProduct.condition + ";" +
+                orderedProduct.OS + ";" +
+                orderedProduct.platform + ";" +
+                orderedProduct.HDD_size + ";" +
+                orderedProduct.HDD_speed + ";" +
+                orderedProduct.GPU_Type + ";" +
+                orderedProduct.optical_drive + ";" +
+                orderedProduct.Audio_type + ";" +
+                orderedProduct.LAN + ";" +
+                orderedProduct.WIFI + ";" +
+                orderedProduct.width + ";" +
+                orderedProduct.height + ";" +
+                orderedProduct.depth + ";" +
+                orderedProduct.weight + ";" +
+                orderedProduct.moust_type + ";" +
+                orderedProduct.power + ";" +
+                orderedProduct.webcam);
                 // close
                 writer.Close();
+
+                MessageBox.Show("File saved", "Success", MessageBoxButtons.OK);
             }
         }
         /// <summary>
@@ -92,7 +127,45 @@ namespace rad_a4
         /// </summary>
         private void fillForm()
         {
-            throw new NotImplementedException();
+            ProductIDTextBox.Text = orderedProduct.productID.ToString();
+            CostTextBox.Text = "$" + Math.Round(Convert.ToDouble(orderedProduct.cost), 2).ToString();
+            ConditionTextBox.Text = orderedProduct.condition;
+            ManufacturerTextBox.Text = orderedProduct.manufacturer;
+            PlatformTextBox.Text = orderedProduct.platform;
+            ModelTextBox.Text = orderedProduct.model;
+            LCDSizeTextBox.Text = orderedProduct.screensize;
+            MemoryTextBox.Text = orderedProduct.RAM_size;
+            CPUBrandTextBox.Text = orderedProduct.CPU_brand;
+            CPUTypeTextBox.Text = orderedProduct.CPU_type;
+            CPUNumberTextBox.Text = orderedProduct.CPU_number;
+            CPUSpeedTextBox.Text = orderedProduct.CPU_speed;
+            HDDTextBox.Text = orderedProduct.HDD_size;
+            GPUTypeTextBox.Text = orderedProduct.GPU_Type;
+            WebcamTextBox.Text = orderedProduct.webcam;
+            OSTextBox.Text = orderedProduct.OS;
+            // activate next button
+            NextButton.Enabled = true;
+        }
+
+        /// <summary>
+        /// shows previous form
+        /// </summary>
+        private void showPreviousForm()
+        {
+            if(previousForm == null)
+            {
+                previousForm = new SelectForm();
+            }
+            previousForm.Show();
+            this.Hide();
+        }
+
+        /// <summary>
+        /// close application
+        /// </summary>
+        private void exit()
+        {
+            Application.Exit();
         }
 
         // events section
@@ -100,22 +173,17 @@ namespace rad_a4
         private void ProductInfoForm_Load(object sender, EventArgs e)
         {
             // add if statement here 
-            if(openFromFile)
+            if(Program.openFromFile)
             {
                 OpenFile();
-                openFromFile = false;
-            } else
+                Program.openFromFile = false;
+            }
+            if(orderedProduct.productID != 0)
             {
                 fillForm();
-            }
-            
+            } 
         }
 
-        private void SaveToFileButton_Click(object sender, EventArgs e)
-        {
-            saveToFile();
-
-        }
         /// <summary>
         /// go to next form
         /// </summary>
@@ -129,14 +197,52 @@ namespace rad_a4
             this.Hide();
         }
         /// <summary>
-        /// go to previous form
+        /// close app
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            previousForm.Show();
-            this.Hide();
+            exit();
+        }
+
+        private void SelectAnotherProductButton_Click(object sender, EventArgs e)
+        {
+            showPreviousForm();
+        }
+
+        private void SelectMenuItem_Click(object sender, EventArgs e)
+        {
+            showPreviousForm();
+        }
+
+        private void SaveMenuItem_Click(object sender, EventArgs e)
+        {
+            if(orderedProduct.productID == 0)
+            {
+                MessageBox.Show("Sorry, you need to select a product to do this", "Error",MessageBoxButtons.OK);
+            } else
+            {
+                DialogResult result = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    saveToFile();
+                }
+            }        
+        }
+
+        private void OpenMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                OpenFile();
+            }
+        }
+
+        private void ExitMenuItem_Click(object sender, EventArgs e)
+        {
+            exit();
         }
     }
 }

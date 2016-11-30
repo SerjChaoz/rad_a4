@@ -57,27 +57,27 @@
             this.CancelButton = new System.Windows.Forms.Button();
             this.NextButton = new System.Windows.Forms.Button();
             this.ProductInfoBox = new System.Windows.Forms.GroupBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.ModelTextBox = new System.Windows.Forms.TextBox();
+            this.OSTextBox = new System.Windows.Forms.TextBox();
+            this.ManufacturerTextBox = new System.Windows.Forms.TextBox();
+            this.PlatformTextBox = new System.Windows.Forms.TextBox();
             this.TechSpecsBox = new System.Windows.Forms.GroupBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.WebcamTextBox = new System.Windows.Forms.TextBox();
+            this.GPUTypeTextBox = new System.Windows.Forms.TextBox();
+            this.CPUSpeedTextBox = new System.Windows.Forms.TextBox();
+            this.CPUNumberTextBox = new System.Windows.Forms.TextBox();
+            this.LCDSizeTextBox = new System.Windows.Forms.TextBox();
+            this.HDDTextBox = new System.Windows.Forms.TextBox();
+            this.CPUTypeTextBox = new System.Windows.Forms.TextBox();
+            this.CPUBrandTextBox = new System.Windows.Forms.TextBox();
+            this.MemoryTextBox = new System.Windows.Forms.TextBox();
             this.MemoryLabel = new System.Windows.Forms.Label();
             this.CPUBrandLabel = new System.Windows.Forms.Label();
             this.LCDSizeLabel = new System.Windows.Forms.Label();
             this.CPUNumberLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.ProductIDTextBox = new System.Windows.Forms.TextBox();
+            this.ConditionTextBox = new System.Windows.Forms.TextBox();
+            this.CostTextBox = new System.Windows.Forms.TextBox();
             this.StripMenu.SuspendLayout();
             this.ProductInfoBox.SuspendLayout();
             this.TechSpecsBox.SuspendLayout();
@@ -110,19 +110,21 @@
             this.OpenMenuItem.Name = "OpenMenuItem";
             this.OpenMenuItem.Size = new System.Drawing.Size(119, 22);
             this.OpenMenuItem.Text = "Open";
-            this.OpenMenuItem.Click += new System.EventHandler(this.SaveToFileButton_Click);
+            this.OpenMenuItem.Click += new System.EventHandler(this.OpenMenuItem_Click);
             // 
             // SaveMenuItem
             // 
             this.SaveMenuItem.Name = "SaveMenuItem";
             this.SaveMenuItem.Size = new System.Drawing.Size(119, 22);
             this.SaveMenuItem.Text = "Save";
+            this.SaveMenuItem.Click += new System.EventHandler(this.SaveMenuItem_Click);
             // 
             // ExitMenuItem
             // 
             this.ExitMenuItem.Name = "ExitMenuItem";
             this.ExitMenuItem.Size = new System.Drawing.Size(119, 22);
             this.ExitMenuItem.Text = "Exit";
+            this.ExitMenuItem.Click += new System.EventHandler(this.ExitMenuItem_Click);
             // 
             // EditMenuItem
             // 
@@ -137,6 +139,7 @@
             this.SelectMenuItem.Name = "SelectMenuItem";
             this.SelectMenuItem.Size = new System.Drawing.Size(263, 22);
             this.SelectMenuItem.Text = "Select Another Product";
+            this.SelectMenuItem.Click += new System.EventHandler(this.SelectMenuItem_Click);
             // 
             // ProductIDLabel
             // 
@@ -172,7 +175,7 @@
             // 
             this.PlatformLabel.AutoSize = true;
             this.PlatformLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PlatformLabel.Location = new System.Drawing.Point(64, 34);
+            this.PlatformLabel.Location = new System.Drawing.Point(23, 31);
             this.PlatformLabel.Name = "PlatformLabel";
             this.PlatformLabel.Size = new System.Drawing.Size(77, 18);
             this.PlatformLabel.TabIndex = 4;
@@ -182,7 +185,7 @@
             // 
             this.ManufacturerLabel.AutoSize = true;
             this.ManufacturerLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ManufacturerLabel.Location = new System.Drawing.Point(64, 81);
+            this.ManufacturerLabel.Location = new System.Drawing.Point(23, 78);
             this.ManufacturerLabel.Name = "ManufacturerLabel";
             this.ManufacturerLabel.Size = new System.Drawing.Size(114, 18);
             this.ManufacturerLabel.TabIndex = 5;
@@ -192,7 +195,7 @@
             // 
             this.OsLabel.AutoSize = true;
             this.OsLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OsLabel.Location = new System.Drawing.Point(556, 34);
+            this.OsLabel.Location = new System.Drawing.Point(488, 34);
             this.OsLabel.Name = "OsLabel";
             this.OsLabel.Size = new System.Drawing.Size(31, 18);
             this.OsLabel.TabIndex = 6;
@@ -202,7 +205,7 @@
             // 
             this.ModelLabel.AutoSize = true;
             this.ModelLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ModelLabel.Location = new System.Drawing.Point(556, 81);
+            this.ModelLabel.Location = new System.Drawing.Point(488, 81);
             this.ModelLabel.Name = "ModelLabel";
             this.ModelLabel.Size = new System.Drawing.Size(56, 18);
             this.ModelLabel.TabIndex = 7;
@@ -314,6 +317,7 @@
             this.SelectAnotherProductButton.TabIndex = 18;
             this.SelectAnotherProductButton.Text = "Select Another Product";
             this.SelectAnotherProductButton.UseVisualStyleBackColor = true;
+            this.SelectAnotherProductButton.Click += new System.EventHandler(this.SelectAnotherProductButton_Click);
             // 
             // CancelButton
             // 
@@ -329,6 +333,7 @@
             // 
             // NextButton
             // 
+            this.NextButton.Enabled = false;
             this.NextButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NextButton.Location = new System.Drawing.Point(816, 448);
             this.NextButton.Name = "NextButton";
@@ -341,10 +346,10 @@
             // 
             // ProductInfoBox
             // 
-            this.ProductInfoBox.Controls.Add(this.textBox7);
-            this.ProductInfoBox.Controls.Add(this.textBox6);
-            this.ProductInfoBox.Controls.Add(this.textBox5);
-            this.ProductInfoBox.Controls.Add(this.textBox4);
+            this.ProductInfoBox.Controls.Add(this.ModelTextBox);
+            this.ProductInfoBox.Controls.Add(this.OSTextBox);
+            this.ProductInfoBox.Controls.Add(this.ManufacturerTextBox);
+            this.ProductInfoBox.Controls.Add(this.PlatformTextBox);
             this.ProductInfoBox.Controls.Add(this.PlatformLabel);
             this.ProductInfoBox.Controls.Add(this.ManufacturerLabel);
             this.ProductInfoBox.Controls.Add(this.OsLabel);
@@ -357,49 +362,49 @@
             this.ProductInfoBox.TabStop = false;
             this.ProductInfoBox.Text = "Product Info";
             // 
-            // textBox7
+            // ModelTextBox
             // 
-            this.textBox7.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox7.Location = new System.Drawing.Point(621, 78);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(239, 27);
-            this.textBox7.TabIndex = 27;
+            this.ModelTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ModelTextBox.Location = new System.Drawing.Point(596, 81);
+            this.ModelTextBox.Name = "ModelTextBox";
+            this.ModelTextBox.Size = new System.Drawing.Size(264, 27);
+            this.ModelTextBox.TabIndex = 27;
             // 
-            // textBox6
+            // OSTextBox
             // 
-            this.textBox6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox6.Location = new System.Drawing.Point(621, 28);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(239, 27);
-            this.textBox6.TabIndex = 26;
+            this.OSTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.OSTextBox.Location = new System.Drawing.Point(596, 31);
+            this.OSTextBox.Name = "OSTextBox";
+            this.OSTextBox.Size = new System.Drawing.Size(264, 27);
+            this.OSTextBox.TabIndex = 26;
             // 
-            // textBox5
+            // ManufacturerTextBox
             // 
-            this.textBox5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox5.Location = new System.Drawing.Point(242, 78);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(187, 27);
-            this.textBox5.TabIndex = 25;
+            this.ManufacturerTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ManufacturerTextBox.Location = new System.Drawing.Point(165, 78);
+            this.ManufacturerTextBox.Name = "ManufacturerTextBox";
+            this.ManufacturerTextBox.Size = new System.Drawing.Size(264, 27);
+            this.ManufacturerTextBox.TabIndex = 25;
             // 
-            // textBox4
+            // PlatformTextBox
             // 
-            this.textBox4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.Location = new System.Drawing.Point(242, 31);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(187, 27);
-            this.textBox4.TabIndex = 24;
+            this.PlatformTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PlatformTextBox.Location = new System.Drawing.Point(165, 31);
+            this.PlatformTextBox.Name = "PlatformTextBox";
+            this.PlatformTextBox.Size = new System.Drawing.Size(264, 27);
+            this.PlatformTextBox.TabIndex = 24;
             // 
             // TechSpecsBox
             // 
-            this.TechSpecsBox.Controls.Add(this.textBox16);
-            this.TechSpecsBox.Controls.Add(this.textBox15);
-            this.TechSpecsBox.Controls.Add(this.textBox14);
-            this.TechSpecsBox.Controls.Add(this.textBox13);
-            this.TechSpecsBox.Controls.Add(this.textBox12);
-            this.TechSpecsBox.Controls.Add(this.textBox11);
-            this.TechSpecsBox.Controls.Add(this.textBox10);
-            this.TechSpecsBox.Controls.Add(this.textBox9);
-            this.TechSpecsBox.Controls.Add(this.textBox8);
+            this.TechSpecsBox.Controls.Add(this.WebcamTextBox);
+            this.TechSpecsBox.Controls.Add(this.GPUTypeTextBox);
+            this.TechSpecsBox.Controls.Add(this.CPUSpeedTextBox);
+            this.TechSpecsBox.Controls.Add(this.CPUNumberTextBox);
+            this.TechSpecsBox.Controls.Add(this.LCDSizeTextBox);
+            this.TechSpecsBox.Controls.Add(this.HDDTextBox);
+            this.TechSpecsBox.Controls.Add(this.CPUTypeTextBox);
+            this.TechSpecsBox.Controls.Add(this.CPUBrandTextBox);
+            this.TechSpecsBox.Controls.Add(this.MemoryTextBox);
             this.TechSpecsBox.Controls.Add(this.MemoryLabel);
             this.TechSpecsBox.Controls.Add(this.CPUBrandLabel);
             this.TechSpecsBox.Controls.Add(this.LCDSizeLabel);
@@ -417,77 +422,77 @@
             this.TechSpecsBox.TabStop = false;
             this.TechSpecsBox.Text = "Tech Specs";
             // 
-            // textBox16
+            // WebcamTextBox
             // 
-            this.textBox16.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox16.Location = new System.Drawing.Point(690, 124);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(170, 27);
-            this.textBox16.TabIndex = 32;
+            this.WebcamTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.WebcamTextBox.Location = new System.Drawing.Point(690, 124);
+            this.WebcamTextBox.Name = "WebcamTextBox";
+            this.WebcamTextBox.Size = new System.Drawing.Size(170, 27);
+            this.WebcamTextBox.TabIndex = 32;
             // 
-            // textBox15
+            // GPUTypeTextBox
             // 
-            this.textBox15.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox15.Location = new System.Drawing.Point(690, 82);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(170, 27);
-            this.textBox15.TabIndex = 31;
+            this.GPUTypeTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.GPUTypeTextBox.Location = new System.Drawing.Point(690, 82);
+            this.GPUTypeTextBox.Name = "GPUTypeTextBox";
+            this.GPUTypeTextBox.Size = new System.Drawing.Size(170, 27);
+            this.GPUTypeTextBox.TabIndex = 31;
             // 
-            // textBox14
+            // CPUSpeedTextBox
             // 
-            this.textBox14.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox14.Location = new System.Drawing.Point(406, 124);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(170, 27);
-            this.textBox14.TabIndex = 30;
+            this.CPUSpeedTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CPUSpeedTextBox.Location = new System.Drawing.Point(406, 124);
+            this.CPUSpeedTextBox.Name = "CPUSpeedTextBox";
+            this.CPUSpeedTextBox.Size = new System.Drawing.Size(170, 27);
+            this.CPUSpeedTextBox.TabIndex = 30;
             // 
-            // textBox13
+            // CPUNumberTextBox
             // 
-            this.textBox13.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox13.Location = new System.Drawing.Point(406, 82);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(170, 27);
-            this.textBox13.TabIndex = 29;
+            this.CPUNumberTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CPUNumberTextBox.Location = new System.Drawing.Point(406, 82);
+            this.CPUNumberTextBox.Name = "CPUNumberTextBox";
+            this.CPUNumberTextBox.Size = new System.Drawing.Size(170, 27);
+            this.CPUNumberTextBox.TabIndex = 29;
             // 
-            // textBox12
+            // LCDSizeTextBox
             // 
-            this.textBox12.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox12.Location = new System.Drawing.Point(406, 43);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(170, 27);
-            this.textBox12.TabIndex = 28;
+            this.LCDSizeTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LCDSizeTextBox.Location = new System.Drawing.Point(406, 43);
+            this.LCDSizeTextBox.Name = "LCDSizeTextBox";
+            this.LCDSizeTextBox.Size = new System.Drawing.Size(170, 27);
+            this.LCDSizeTextBox.TabIndex = 28;
             // 
-            // textBox11
+            // HDDTextBox
             // 
-            this.textBox11.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox11.Location = new System.Drawing.Point(690, 40);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(170, 27);
-            this.textBox11.TabIndex = 27;
+            this.HDDTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.HDDTextBox.Location = new System.Drawing.Point(690, 40);
+            this.HDDTextBox.Name = "HDDTextBox";
+            this.HDDTextBox.Size = new System.Drawing.Size(170, 27);
+            this.HDDTextBox.TabIndex = 27;
             // 
-            // textBox10
+            // CPUTypeTextBox
             // 
-            this.textBox10.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox10.Location = new System.Drawing.Point(117, 124);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(170, 27);
-            this.textBox10.TabIndex = 26;
+            this.CPUTypeTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CPUTypeTextBox.Location = new System.Drawing.Point(117, 124);
+            this.CPUTypeTextBox.Name = "CPUTypeTextBox";
+            this.CPUTypeTextBox.Size = new System.Drawing.Size(170, 27);
+            this.CPUTypeTextBox.TabIndex = 26;
             // 
-            // textBox9
+            // CPUBrandTextBox
             // 
-            this.textBox9.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox9.Location = new System.Drawing.Point(117, 84);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(170, 27);
-            this.textBox9.TabIndex = 25;
+            this.CPUBrandTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CPUBrandTextBox.Location = new System.Drawing.Point(117, 84);
+            this.CPUBrandTextBox.Name = "CPUBrandTextBox";
+            this.CPUBrandTextBox.Size = new System.Drawing.Size(170, 27);
+            this.CPUBrandTextBox.TabIndex = 25;
             // 
-            // textBox8
+            // MemoryTextBox
             // 
-            this.textBox8.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox8.Location = new System.Drawing.Point(117, 40);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(170, 27);
-            this.textBox8.TabIndex = 24;
+            this.MemoryTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MemoryTextBox.Location = new System.Drawing.Point(117, 40);
+            this.MemoryTextBox.Name = "MemoryTextBox";
+            this.MemoryTextBox.Size = new System.Drawing.Size(170, 27);
+            this.MemoryTextBox.TabIndex = 24;
             // 
             // MemoryLabel
             // 
@@ -529,37 +534,37 @@
             this.CPUNumberLabel.TabIndex = 7;
             this.CPUNumberLabel.Text = "CPU Number";
             // 
-            // textBox1
+            // ProductIDTextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(141, 48);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(167, 27);
-            this.textBox1.TabIndex = 23;
+            this.ProductIDTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ProductIDTextBox.Location = new System.Drawing.Point(141, 48);
+            this.ProductIDTextBox.Name = "ProductIDTextBox";
+            this.ProductIDTextBox.Size = new System.Drawing.Size(167, 27);
+            this.ProductIDTextBox.TabIndex = 23;
             // 
-            // textBox2
+            // ConditionTextBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(431, 48);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(187, 27);
-            this.textBox2.TabIndex = 24;
+            this.ConditionTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ConditionTextBox.Location = new System.Drawing.Point(431, 48);
+            this.ConditionTextBox.Name = "ConditionTextBox";
+            this.ConditionTextBox.Size = new System.Drawing.Size(187, 27);
+            this.ConditionTextBox.TabIndex = 24;
             // 
-            // textBox3
+            // CostTextBox
             // 
-            this.textBox3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(730, 48);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(187, 27);
-            this.textBox3.TabIndex = 25;
+            this.CostTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CostTextBox.Location = new System.Drawing.Point(730, 48);
+            this.CostTextBox.Name = "CostTextBox";
+            this.CostTextBox.Size = new System.Drawing.Size(187, 27);
+            this.CostTextBox.TabIndex = 25;
             // 
             // ProductInfoForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(963, 513);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.CostTextBox);
+            this.Controls.Add(this.ConditionTextBox);
+            this.Controls.Add(this.ProductIDTextBox);
             this.Controls.Add(this.TechSpecsBox);
             this.Controls.Add(this.ProductInfoBox);
             this.Controls.Add(this.NextButton);
@@ -626,21 +631,21 @@
         private System.Windows.Forms.Label CPUBrandLabel;
         private System.Windows.Forms.Label LCDSizeLabel;
         private System.Windows.Forms.Label CPUNumberLabel;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox ModelTextBox;
+        private System.Windows.Forms.TextBox OSTextBox;
+        private System.Windows.Forms.TextBox ManufacturerTextBox;
+        private System.Windows.Forms.TextBox PlatformTextBox;
+        private System.Windows.Forms.TextBox WebcamTextBox;
+        private System.Windows.Forms.TextBox GPUTypeTextBox;
+        private System.Windows.Forms.TextBox CPUSpeedTextBox;
+        private System.Windows.Forms.TextBox CPUNumberTextBox;
+        private System.Windows.Forms.TextBox LCDSizeTextBox;
+        private System.Windows.Forms.TextBox HDDTextBox;
+        private System.Windows.Forms.TextBox CPUTypeTextBox;
+        private System.Windows.Forms.TextBox CPUBrandTextBox;
+        private System.Windows.Forms.TextBox MemoryTextBox;
+        private System.Windows.Forms.TextBox ProductIDTextBox;
+        private System.Windows.Forms.TextBox ConditionTextBox;
+        private System.Windows.Forms.TextBox CostTextBox;
     }
 }

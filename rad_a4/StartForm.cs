@@ -17,7 +17,6 @@ namespace rad_a4
 {
     public partial class StartForm : Form
     {
-        public bool openFromFile = Program.openFromFile;
         public StartForm()
         {
             InitializeComponent();
@@ -42,7 +41,7 @@ namespace rad_a4
         /// <param name="e"></param>
         private void OpenSavedOrderButton_Click(object sender, EventArgs e)
         {
-            openFromFile = true;
+            Program.openFromFile = true;
             ProductInfoForm productInfoForm = new ProductInfoForm();
             productInfoForm.Show();
             this.Hide();
