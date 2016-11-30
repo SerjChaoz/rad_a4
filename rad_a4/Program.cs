@@ -17,6 +17,9 @@ namespace rad_a4
         [STAThread]
         static void Main()
         {
+            // create product object on application start
+            orderedProduct = new product();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new StartForm());

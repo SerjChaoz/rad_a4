@@ -144,6 +144,28 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="img\comp22.jpg" />
+    <None Include="img\comp21.jpg" />
+    <None Include="img\comp20.jpg" />
+    <None Include="img\comp19.jpg" />
+    <None Include="img\comp18.jpg" />
+    <None Include="img\comp17.jpg" />
+    <None Include="img\comp16.jpg" />
+    <None Include="img\comp15.jpg" />
+    <None Include="img\comp14.jpg" />
+    <None Include="img\comp13.jpg" />
+    <None Include="img\comp12.jpg" />
+    <None Include="img\comp11.jpg" />
+    <None Include="img\comp10.jpg" />
+    <None Include="img\comp9.jpg" />
+    <None Include="img\comp8.jpg" />
+    <None Include="img\comp7.jpg" />
+    <None Include="img\comp6.jpg" />
+    <None Include="img\comp5.jpg" />
+    <None Include="img\comp4.jpg" />
+    <None Include="img\comp3.jpg" />
+    <None Include="img\comp2.jpg" />
+    <None Include="img\comp1.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="img\splash.jpg" />

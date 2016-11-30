@@ -124,4 +124,70 @@
   <data name="dollar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\dollar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="comp1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\comp1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="comp2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\comp2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="comp3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\comp3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="comp4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\comp4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="comp5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\comp5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="comp6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\comp6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="comp7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\comp7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="comp8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\comp8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="comp9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\comp9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="comp10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\comp10.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="comp11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\comp11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="comp12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\comp12.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="comp13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\comp13.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="comp14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\comp14.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="comp15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\comp15.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="comp16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\comp16.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="comp17" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\comp17.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="comp18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\comp18.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="comp19" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\comp19.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="comp20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\comp20.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="comp21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\comp21.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="comp22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\comp22.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

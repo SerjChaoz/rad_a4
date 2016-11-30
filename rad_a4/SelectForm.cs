@@ -88,13 +88,48 @@ namespace rad_a4
                                    select product).FirstOrDefault();
 
             // store data in product object
-            orderedProduct = selectedProduct;
+            fillProductObject(selectedProduct);
 
             // put data from object to text field
             SummaryTextBox.Text = orderedProduct.manufacturer + " " + orderedProduct.model +
                 ". Priced at: $" + Math.Round(Convert.ToDouble(orderedProduct.cost), 2);
             // unlock next button
             NextButton.Enabled = true;
+        }
+
+        private void fillProductObject(product selectedProduct)
+        {
+            orderedProduct.productID = selectedProduct.productID;
+            orderedProduct.cost = selectedProduct.cost;
+            orderedProduct.manufacturer = selectedProduct.manufacturer;
+            orderedProduct.model = selectedProduct.model;
+            orderedProduct.RAM_type = selectedProduct.RAM_type;
+            orderedProduct.RAM_size = selectedProduct.RAM_size;
+            orderedProduct.displaytype = selectedProduct.displaytype;
+            orderedProduct.screensize = selectedProduct.screensize;
+            orderedProduct.resolution = selectedProduct.resolution;
+            orderedProduct.CPU_brand = selectedProduct.CPU_brand;
+            orderedProduct.CPU_Class = selectedProduct.CPU_Class;
+            orderedProduct.CPU_number = selectedProduct.CPU_number;
+            orderedProduct.CPU_speed = selectedProduct.CPU_speed;
+            orderedProduct.CPU_type = selectedProduct.CPU_type;
+            orderedProduct.condition = selectedProduct.condition;
+            orderedProduct.OS = selectedProduct.OS;
+            orderedProduct.platform = selectedProduct.platform;
+            orderedProduct.HDD_size = selectedProduct.HDD_size;
+            orderedProduct.HDD_speed = selectedProduct.HDD_speed;
+            orderedProduct.GPU_Type = selectedProduct.GPU_Type;
+            orderedProduct.optical_drive = selectedProduct.optical_drive;
+            orderedProduct.Audio_type = selectedProduct.Audio_type;
+            orderedProduct.LAN = selectedProduct.LAN;
+            orderedProduct.WIFI = selectedProduct.WIFI;
+            orderedProduct.width = selectedProduct.width;
+            orderedProduct.height = selectedProduct.height;
+            orderedProduct.depth = selectedProduct.depth;
+            orderedProduct.weight = selectedProduct.weight;
+            orderedProduct.moust_type = selectedProduct.moust_type;
+            orderedProduct.power = selectedProduct.power;
+            orderedProduct.webcam = selectedProduct.webcam;
         }
     }
 }
