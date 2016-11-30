@@ -21,7 +21,7 @@ namespace rad_a4
     {
         // form variables
         public SelectForm previousForm;
-        public static product orderedProduct = Program.orderedProduct;
+        public product orderedProduct = Program.orderedProduct;
 
         public ProductInfoForm()
         {
@@ -32,7 +32,7 @@ namespace rad_a4
         /// <summary>
         /// this method save form information to file
         /// </summary>
-        private static void saveToFile()
+        private void saveToFile()
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.FileName = "Product";
@@ -110,10 +110,18 @@ namespace rad_a4
                     StreamReader reader = new StreamReader(openFileDialog.FileName);
 
                     // read in the data with readline to the object
+                    string orderDataString = reader.ReadLine();
 
                     // close the streams
                     reader.Close();
 
+                    // convert data to array
+                    string[] orderArray = orderDataString.Split(';');
+
+                    restoreOrder(orderArray);
+
+                    MessageBox.Show("Your order was restored", "Success", MessageBoxButtons.OK);
+                    fillForm();
                 }
                 catch (Exception)
                 {
@@ -121,6 +129,46 @@ namespace rad_a4
                 }
             }
         }
+
+        /// <summary>
+        /// this method restore previous order from order array
+        /// </summary>
+        /// <param name="orderArray"></param>
+        private void restoreOrder(string[] orderArray)
+        {
+            orderedProduct.productID = short.Parse(orderArray[0]);
+            orderedProduct.cost = Convert.ToDecimal(orderArray[1]);
+            orderedProduct.manufacturer = orderArray[2];
+            orderedProduct.model = orderArray[3];
+            orderedProduct.RAM_type = orderArray[4];
+            orderedProduct.RAM_size = orderArray[5];
+            orderedProduct.displaytype = orderArray[6];
+            orderedProduct.screensize = orderArray[7];
+            orderedProduct.resolution = orderArray[8];
+            orderedProduct.CPU_brand = orderArray[9];
+            orderedProduct.CPU_Class = orderArray[10];
+            orderedProduct.CPU_number = orderArray[11];
+            orderedProduct.CPU_speed = orderArray[12];
+            orderedProduct.CPU_type = orderArray[13];
+            orderedProduct.condition = orderArray[14];
+            orderedProduct.OS = orderArray[15];
+            orderedProduct.platform = orderArray[16];
+            orderedProduct.HDD_size = orderArray[17];
+            orderedProduct.HDD_speed = orderArray[18];
+            orderedProduct.GPU_Type = orderArray[19];
+            orderedProduct.optical_drive = orderArray[20];
+            orderedProduct.Audio_type = orderArray[21];
+            orderedProduct.LAN = orderArray[22];
+            orderedProduct.WIFI = orderArray[23];
+            orderedProduct.width = orderArray[24];
+            orderedProduct.height = orderArray[25];
+            orderedProduct.depth = orderArray[26];
+            orderedProduct.weight = orderArray[27];
+            orderedProduct.moust_type = orderArray[28];
+            orderedProduct.power = orderArray[29];
+            orderedProduct.webcam = orderArray[30];
+        }
+
 
         /// <summary>
         /// fill form with information from product object
