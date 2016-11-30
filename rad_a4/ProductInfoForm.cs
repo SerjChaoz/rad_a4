@@ -1,4 +1,8 @@
-﻿using System;
+﻿// RAD-Assignment4, Sergei #200325005, 30-11-2016. 
+// This program select product table from Microsoft Azure and put products list to Data Grid,
+// user can choose any product, save and read from files
+// final form show all data and calculate total cost
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,46 +18,11 @@ namespace rad_a4
     public partial class ProductInfoForm : Form
     {
         public SelectForm previousForm;
+        public bool openFromFile = Program.openFromFile;
 
         public ProductInfoForm()
         {
             InitializeComponent();
-        }
-
-        private void ProductInfoForm_Load(object sender, EventArgs e)
-        {
-            // add if statement here 
-            OpenFile();
-        }
-
-        // events section
-
-        private void SaveToFileButton_Click(object sender, EventArgs e)
-        {
-            saveToFile();
-
-        }
-        /// <summary>
-        /// go to next form
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void NextButton_Click(object sender, EventArgs e)
-        {
-            OrderForm orderForm = new OrderForm();
-            orderForm.previousForm = this;
-            orderForm.Show();
-            this.Hide();
-        }
-        /// <summary>
-        /// go to previous form
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void CancelButton_Click(object sender, EventArgs e)
-        {
-            previousForm.Show();
-            this.Hide();
         }
 
         // method section
@@ -116,6 +85,58 @@ namespace rad_a4
                     MessageBox.Show("Error occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        /// <summary>
+        /// fill form with information from product object
+        /// </summary>
+        private void fillForm()
+        {
+            throw new NotImplementedException();
+        }
+
+        // events section
+
+        private void ProductInfoForm_Load(object sender, EventArgs e)
+        {
+            // add if statement here 
+            if(openFromFile)
+            {
+                OpenFile();
+                openFromFile = false;
+            } else
+            {
+                fillForm();
+            }
+            
+        }
+
+        private void SaveToFileButton_Click(object sender, EventArgs e)
+        {
+            saveToFile();
+
+        }
+        /// <summary>
+        /// go to next form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            OrderForm orderForm = new OrderForm();
+            orderForm.previousForm = this;
+            orderForm.Show();
+            this.Hide();
+        }
+        /// <summary>
+        /// go to previous form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            previousForm.Show();
+            this.Hide();
         }
     }
 }

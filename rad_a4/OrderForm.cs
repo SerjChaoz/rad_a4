@@ -1,4 +1,8 @@
-﻿using System;
+﻿// RAD-Assignment4, Sergei #200325005, 30-11-2016. 
+// This program select product table from Microsoft Azure and put products list to Data Grid,
+// user can choose any product, save and read from files
+// final form show all data and calculate total cost
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,7 +29,7 @@ namespace rad_a4
         /// <summary>
         /// this method fill text boxes from information stored in product object
         /// </summary>
-        private void fillTextBoxes()
+        private void fillForm()
         {
             ConditionTextBox.Text = orderedProduct.condition;
             ManufacturerTextBox.Text = orderedProduct.manufacturer;
@@ -87,12 +91,12 @@ namespace rad_a4
         /// <param name="e"></param>
         private void OrderForm_Load(object sender, EventArgs e)
         {
-            fillTextBoxes();
+            fillForm();
         }
 
         private void aboutStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Program created by Sergei st#200325005. Version 1.1. Website: www.chaoz.ca. Dollar Computers Inc. Phone: 8 800 555 3535", "About program");
+            MessageBox.Show("Program created by Sergei st#200325005. \nVersion 1.1 \nWebsite: www.chaoz.ca. \nDollar Computers Inc. \nPhone: 8 800 555 3535", "About program");
         }
 
         /// <summary>
